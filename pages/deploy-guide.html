@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployment Guide - Social Media Manager</title>
+    <!-- Compiled CSS -->
+    <link href="../styles/output.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .font-orbitron { font-family: 'Orbitron', sans-serif; }
+        .font-roboto { font-family: 'Roboto', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .bg-gradient { background: linear-gradient(135deg, #1a1a1a, #2d3436); }
+    </style>
+</head>
+<body class="bg-black text-white font-roboto">
+    <!-- Navigation -->
+    <nav class="w-full bg-black/90 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-music text-3xl gradient-text"></i>
+                    <span class="font-orbitron text-2xl font-bold gradient-text">TBG</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <h1 class="text-4xl font-orbitron font-bold gradient-text mb-8">Deployment Guide</h1>
+
+        <!-- Step 1: GitHub -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-orbitron mb-6 flex items-center">
+                <span class="bg-[#4ECDC4] text-black rounded-full w-8 h-8 flex items-center justify-center mr-3">1</span>
+                Push to GitHub
+            </h2>
+            <div class="bg-gradient rounded-xl p-6 space-y-4">
+                <div class="space-y-2">
+                    <p class="text-gray-300">Initialize Git and push to GitHub:</p>
+                    <div class="bg-gray-900 rounded-lg p-4 font-mono text-sm">
+                        <p class="text-gray-300">git init</p>
+                        <p class="text-gray-300">git add .</p>
+                        <p class="text-gray-300">git commit -m "Initial commit"</p>
+                        <p class="text-gray-300">git remote add origin your-repo-url</p>
+                        <p class="text-gray-300">git push -u origin main</p>
+                    </div>
+                </div>
+                <div class="border-l-4 border-[#4ECDC4] pl-4 mt-4">
+                    <p class="text-sm text-gray-400">Make sure your repository is public or you have proper access configured.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 2: Netlify Setup -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-orbitron mb-6 flex items-center">
+                <span class="bg-[#4ECDC4] text-black rounded-full w-8 h-8 flex items-center justify-center mr-3">2</span>
+                Connect to Netlify
+            </h2>
+            <div class="bg-gradient rounded-xl p-6 space-y-4">
+                <ol class="list-decimal list-inside space-y-4">
+                    <li class="text-gray-300">
+                        Go to <a href="https://www.netlify.com" class="text-[#4ECDC4] hover:underline" target="_blank">Netlify.com</a> and sign up/login
+                    </li>
+                    <li class="text-gray-300">Click "New site from Git"</li>
+                    <li class="text-gray-300">Choose GitHub as your Git provider</li>
+                    <li class="text-gray-300">Select your repository</li>
+                </ol>
+                <div class="mt-6 bg-gray-900 rounded-lg p-4">
+                    <img src="https://i.imgur.com/example1.png" alt="Netlify Setup" class="rounded-lg opacity-75 hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 3: Configure Build -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-orbitron mb-6 flex items-center">
+                <span class="bg-[#4ECDC4] text-black rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
+                Configure Build Settings
+            </h2>
+            <div class="bg-gradient rounded-xl p-6">
+                <div class="space-y-4">
+                    <div class="bg-gray-900 rounded-lg p-4">
+                        <h3 class="font-bold text-[#4ECDC4] mb-2">Build Settings:</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <span class="text-gray-400 w-32">Build command:</span>
+                                <span class="text-gray-300">(leave empty)</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-gray-400 w-32">Publish directory:</span>
+                                <span class="text-gray-300">/</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4: Custom Domain -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-orbitron mb-6 flex items-center">
+                <span class="bg-[#4ECDC4] text-black rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
+                Set Up Custom Domain
+            </h2>
+            <div class="bg-gradient rounded-xl p-6 space-y-6">
+                <div class="space-y-4">
+                    <p class="text-gray-300">1. Purchase your .ai or .io domain</p>
+                    <p class="text-gray-300">2. In Netlify, go to Site settings > Domain management</p>
+                    <p class="text-gray-300">3. Click "Add custom domain"</p>
+                    <p class="text-gray-300">4. Enter your domain and follow the DNS configuration steps</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-4">
+                    <h3 class="font-bold text-[#4ECDC4] mb-2">DNS Configuration:</h3>
+                    <div class="font-mono text-sm space-y-2">
+                        <p class="text-gray-300">Type: A Record</p>
+                        <p class="text-gray-300">Name: @</p>
+                        <p class="text-gray-300">Value: Netlify's IP</p>
+                        <p class="text-gray-300">TTL: 3600</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 5: Final Steps -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-orbitron mb-6 flex items-center">
+                <span class="bg-[#4ECDC4] text-black rounded-full w-8 h-8 flex items-center justify-center mr-3">5</span>
+                Final Configuration
+            </h2>
+            <div class="bg-gradient rounded-xl p-6">
+                <div class="space-y-4">
+                    <div class="bg-gray-900 rounded-lg p-4">
+                        <h3 class="font-bold text-[#4ECDC4] mb-2">Before Going Live:</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Replace 'demo_client_id' with your Google OAuth client ID</li>
+                            <li>Enable HTTPS (automatic with Netlify)</li>
+                            <li>Test all functionality</li>
+                            <li>Set up environment variables if needed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Message -->
+        <section>
+            <div class="bg-gradient rounded-xl p-6 text-center">
+                <i class="fas fa-check-circle text-[#4ECDC4] text-4xl mb-4"></i>
+                <h2 class="text-2xl font-orbitron mb-2">You're Ready to Go Live!</h2>
+                <p class="text-gray-400">Your social media manager will be available at your custom domain in 24-48 hours.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600">Need help? Check the <a href="https://docs.netlify.com" class="text-[#4ECDC4] hover:underline" target="_blank">Netlify Documentation</a></p>
+        </div>
+    </footer>
+</body>
+</html>
