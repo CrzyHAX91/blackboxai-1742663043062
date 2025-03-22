@@ -1,0 +1,3 @@
+@echo off
+echo Starting setup...
+scripts\auto-setup.bat
