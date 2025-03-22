@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ THEBADGUY (TBG) - Official Website</title>
+    <!-- Compiled CSS -->
+    <link href="styles/output.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .font-orbitron { font-family: 'Orbitron', sans-serif; }
+        .font-roboto { font-family: 'Roboto', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .bg-gradient { background: linear-gradient(135deg, #1a1a1a, #2d3436); }
+        .hover-glow:hover {
+            box-shadow: 0 0 15px rgba(78, 205, 196, 0.5);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1571266028243-3716f02d2d2e?w=1600') center/cover;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-roboto">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center space-x-2">
+                    <i class="fas fa-music text-3xl gradient-text"></i>
+                    <span class="font-orbitron text-2xl font-bold gradient-text">TBG</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-[#4ECDC4] transition-colors">About</a>
+                    <a href="#music" class="hover:text-[#4ECDC4] transition-colors">Music</a>
+                    <a href="#shows" class="hover:text-[#4ECDC4] transition-colors">Shows</a>
+                    <a href="#contact" class="hover:text-[#4ECDC4] transition-colors">Contact</a>
+                    <a href="pages/deploy-guide.html" class="text-[#4ECDC4] hover:text-white transition-colors mr-4">
+                        <i class="fas fa-rocket mr-1"></i> Deploy Guide
+                    </a>
+                    <a href="pages/login.html" class="bg-[#4ECDC4] text-black px-4 py-2 rounded-full hover:bg-[#3dbdb5] transition-colors">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center">
+        <div class="container mx-auto px-4 py-16 text-center">
+            <h1 class="font-orbitron text-6xl md:text-8xl font-bold mb-6 gradient-text">
+                DJ THEBADGUY
+            </h1>
+            <p class="text-2xl md:text-3xl mb-4 text-gray-300">aka TBG</p>
+            <p class="text-xl md:text-2xl mb-8 text-gray-400">
+                Pushing Boundaries in Electronic Music
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#music" class="bg-[#4ECDC4] text-black font-bold py-3 px-8 rounded-full hover-glow">
+                    Listen Now
+                </a>
+                <a href="#shows" class="border-2 border-[#4ECDC4] text-[#4ECDC4] font-bold py-3 px-8 rounded-full hover-glow">
+                    Upcoming Shows
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="font-orbitron text-4xl font-bold mb-12 gradient-text text-center">Latest Tracks</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Track 1 -->
+                <div class="bg-gradient rounded-xl p-6 hover-glow">
+                    <div class="aspect-square bg-gray-800 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fas fa-play text-4xl text-[#4ECDC4]"></i>
+                    </div>
+                    <h3 class="font-orbitron text-xl mb-2">Neon Dreams</h3>
+                    <p class="text-gray-400 mb-4">Latest Mix - 2024</p>
+                    <audio controls class="w-full">
+                        <source src="#" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <!-- Track 2 -->
+                <div class="bg-gradient rounded-xl p-6 hover-glow">
+                    <div class="aspect-square bg-gray-800 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fas fa-play text-4xl text-[#4ECDC4]"></i>
+                    </div>
+                    <h3 class="font-orbitron text-xl mb-2">Underground Vibes</h3>
+                    <p class="text-gray-400 mb-4">Club Mix - 2024</p>
+                    <audio controls class="w-full">
+                        <source src="#" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <!-- Track 3 -->
+                <div class="bg-gradient rounded-xl p-6 hover-glow">
+                    <div class="aspect-square bg-gray-800 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fas fa-play text-4xl text-[#4ECDC4]"></i>
+                    </div>
+                    <h3 class="font-orbitron text-xl mb-2">Summer Beats</h3>
+                    <p class="text-gray-400 mb-4">Festival Mix - 2023</p>
+                    <audio controls class="w-full">
+                        <source src="#" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient">
+        <div class="container mx-auto px-4">
+            <h2 class="font-orbitron text-4xl font-bold mb-12 gradient-text text-center">About TBG</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1516873240891-4bf014598ab4?w=800"
+                         alt="DJ THEBADGUY"
+                         class="rounded-xl shadow-2xl hover-glow">
+                </div>
+                <div>
+                    <p class="text-xl mb-6 text-gray-300">
+                        DJ THEBADGUY (TBG) brings the heat to every set with a unique blend of
+                        house, techno, and electronic beats. Known for high-energy performances
+                        and seamless mixing, TBG has become a force in the electronic music scene.
+                    </p>
+                    <p class="text-xl text-gray-300">
+                        From underground clubs to major festivals, each set is crafted to take
+                        the audience on an unforgettable journey through sound.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shows Section -->
+    <section id="shows" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="font-orbitron text-4xl font-bold mb-12 gradient-text text-center">Upcoming Shows</h2>
+            <div class="space-y-6">
+                <!-- Show 1 -->
+                <div class="bg-gradient rounded-xl p-6 hover-glow">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="font-orbitron text-xl mb-2">Club Neon</h3>
+                            <p class="text-gray-400">Miami, FL</p>
+                        </div>
+                        <div class="text-center md:text-right">
+                            <p class="text-[#4ECDC4] mb-2">March 30, 2024</p>
+                            <a href="#" class="inline-block bg-[#4ECDC4] text-black font-bold py-2 px-6 rounded-full hover-glow">
+                                Get Tickets
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Show 2 -->
+                <div class="bg-gradient rounded-xl p-6 hover-glow">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="font-orbitron text-xl mb-2">Electric Festival</h3>
+                            <p class="text-gray-400">Las Vegas, NV</p>
+                        </div>
+                        <div class="text-center md:text-right">
+                            <p class="text-[#4ECDC4] mb-2">April 15, 2024</p>
+                            <a href="#" class="inline-block bg-[#4ECDC4] text-black font-bold py-2 px-6 rounded-full hover-glow">
+                                Get Tickets
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient">
+        <div class="container mx-auto px-4">
+            <h2 class="font-orbitron text-4xl font-bold mb-12 gradient-text text-center">Connect</h2>
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="text-xl mb-8 text-gray-300">
+                    Follow TBG on social media and never miss a beat
+                </p>
+                <div class="flex justify-center space-x-8">
+                    <a href="#" class="text-gray-400 hover:text-[#4ECDC4] transition-colors">
+                        <i class="fab fa-instagram text-3xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#4ECDC4] transition-colors">
+                        <i class="fab fa-soundcloud text-3xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#4ECDC4] transition-colors">
+                        <i class="fab fa-spotify text-3xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#4ECDC4] transition-colors">
+                        <i class="fab fa-youtube text-3xl"></i>
+                    </a>
+                </div>
+                <p class="mt-8 text-xl text-[#4ECDC4]">
+                    Bookings: bookings@tbg.io
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <span class="font-orbitron text-xl gradient-text">DJ THEBADGUY</span>
+                <p class="mt-4 text-gray-600">&copy; 2024 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/app.js"></script>
+</body>
+</html>
