@@ -1,0 +1,27 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.rulers": [80, 100],
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "html.format.wrapLineLength": 100,
+    "javascript.format.semicolons": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "tailwindCSS.includeLanguages": {
+        "html": "html",
+        "javascript": "javascript"
+    },
+    "tailwindCSS.emmetCompletions": true,
+    "liveServer.settings.port": 8000,
+    "liveServer.settings.root": "/",
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#1a1a1a",
+        "titleBar.activeForeground": "#4ECDC4",
+        "activityBar.background": "#1a1a1a",
+        "activityBar.foreground": "#4ECDC4"
+    }
+}
