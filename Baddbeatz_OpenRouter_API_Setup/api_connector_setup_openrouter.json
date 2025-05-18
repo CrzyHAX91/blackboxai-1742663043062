@@ -1,0 +1,25 @@
+{
+  "name": "OpenRouter GPT-4o",
+  "base_url": "https://openrouter.ai/api/v1",
+  "headers": [
+    { "key": "Authorization", "value": "Bearer YOUR_OPENROUTER_API_KEY", "private": true },
+    { "key": "Content-Type", "value": "application/json" }
+  ],
+  "calls": [
+    {
+      "name": "generateCaptionWith4o",
+      "description": "Genereer social media caption met GPT-4o",
+      "method": "POST",
+      "path": "/chat/completions",
+      "use_as": "Action",
+      "body": {
+        "model": "openai/gpt-4o",
+        "messages": [
+          { "role": "system", "content": "Je bent een social media content specialist voor Baddbeatz." },
+          { "role": "user", "content": "Maak een caption voor een TikTok post met een nieuwe drill beat drop." }
+        ],
+        "temperature": 0.9
+      }
+    }
+  ]
+}

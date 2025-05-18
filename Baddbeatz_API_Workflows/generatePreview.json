@@ -1,0 +1,12 @@
+{
+  "name": "Generate Preview",
+  "description": "Genereer een content preview op basis van tekst en afbeelding",
+  "method": "POST",
+  "url": "https://api.your-preview-service.com/generate",
+  "headers": [{"key": "Authorization", "value": "Bearer YOUR_API_KEY"}],
+  "body": {
+    "caption": "<caption>",
+    "image_url": "<imageURL>",
+    "platform": "<platform>"
+  }
+}

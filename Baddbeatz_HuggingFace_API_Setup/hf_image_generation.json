@@ -1,0 +1,20 @@
+{
+  "name": "HuggingFace Image Generation",
+  "base_url": "https://api-inference.huggingface.co/models",
+  "headers": [
+    { "key": "Authorization", "value": "Bearer YOUR_HUGGINGFACE_API_KEY", "private": true },
+    { "key": "Content-Type", "value": "application/json" }
+  ],
+  "calls": [
+    {
+      "name": "generateImageHF",
+      "description": "Genereer visuals voor posts met HuggingFace diffusers model",
+      "method": "POST",
+      "path": "/CompVis/stable-diffusion-v1-4",
+      "use_as": "Action",
+      "body": {
+        "inputs": "Een duistere, neonrode achtergrond voor een drill beat post op TikTok"
+      }
+    }
+  ]
+}

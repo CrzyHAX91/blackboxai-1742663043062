@@ -1,0 +1,20 @@
+{
+  "name": "HuggingFace Audio Transcription",
+  "base_url": "https://api-inference.huggingface.co/models",
+  "headers": [
+    { "key": "Authorization", "value": "Bearer YOUR_HUGGINGFACE_API_KEY", "private": true }
+  ],
+  "calls": [
+    {
+      "name": "transcribeAudioHF",
+      "description": "Zet audio om naar tekst met Whisper via HuggingFace",
+      "method": "POST",
+      "path": "/openai/whisper-large",
+      "use_as": "Action",
+      "body_type": "form-data",
+      "params": {
+        "file": "audio_file"
+      }
+    }
+  ]
+}

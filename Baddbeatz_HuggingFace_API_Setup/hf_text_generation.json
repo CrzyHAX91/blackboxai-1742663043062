@@ -1,0 +1,20 @@
+{
+  "name": "HuggingFace Text Generation",
+  "base_url": "https://api-inference.huggingface.co/models",
+  "headers": [
+    { "key": "Authorization", "value": "Bearer YOUR_HUGGINGFACE_API_KEY", "private": true },
+    { "key": "Content-Type", "value": "application/json" }
+  ],
+  "calls": [
+    {
+      "name": "generateCaptionFromHF",
+      "description": "Genereer een caption met een HuggingFace model",
+      "method": "POST",
+      "path": "/mistralai/Mistral-7B-Instruct-v0.1",
+      "use_as": "Action",
+      "body": {
+        "inputs": "Schrijf een caption voor een TikTok drill beat drop."
+      }
+    }
+  ]
+}

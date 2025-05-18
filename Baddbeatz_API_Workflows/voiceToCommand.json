@@ -1,0 +1,15 @@
+{
+  "name": "Voice To Command",
+  "description": "Gebruik Whisper om gesproken commando's om te zetten naar tekst",
+  "method": "POST",
+  "url": "https://api.openai.com/v1/audio/transcriptions",
+  "headers": [
+    {"key": "Authorization", "value": "Bearer YOUR_OPENAI_KEY"},
+    {"key": "Content-Type", "value": "multipart/form-data"}
+  ],
+  "body_type": "form-data",
+  "body": {
+    "file": "<audioFile>",
+    "model": "whisper-1"
+  }
+}

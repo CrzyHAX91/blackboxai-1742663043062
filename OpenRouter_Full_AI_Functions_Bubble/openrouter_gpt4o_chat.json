@@ -1,0 +1,25 @@
+{
+  "api_name": "OpenRouter GPT-4o",
+  "calls": [
+    {
+      "name": "generateCaption",
+      "method": "POST",
+      "use_as": "Action",
+      "url": "https://openrouter.ai/api/v1/chat/completions",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" },
+        { "key": "Authorization", "value": "Bearer YOUR_OPENROUTER_API_KEY" }
+      ],
+      "body_type": "JSON",
+      "body": {
+        "model": "openrouter/openai/gpt-4o",
+        "messages": [
+          { "role": "system", "content": "Je bent een creatieve social media expert." },
+          { "role": "user", "content": "Schrijf een caption voor een TikTok-video met een nieuwe beat drop." }
+        ],
+        "temperature": 0.8,
+        "max_tokens": 100
+      }
+    }
+  ]
+}

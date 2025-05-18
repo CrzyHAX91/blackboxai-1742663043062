@@ -1,0 +1,21 @@
+{
+  "api_name": "OpenRouter Video Generator",
+  "calls": [
+    {
+      "name": "generateVideo",
+      "method": "POST",
+      "use_as": "Action",
+      "url": "https://api.runwayml.com/v1/generate-video",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" },
+        { "key": "Authorization", "value": "Bearer YOUR_RUNWAY_KEY" }
+      ],
+      "body_type": "JSON",
+      "body": {
+        "caption": "Nieuwe beat drop trailer",
+        "audio_url": "https://yourcdn.com/snippet123.mp3",
+        "platform": "tiktok"
+      }
+    }
+  ]
+}

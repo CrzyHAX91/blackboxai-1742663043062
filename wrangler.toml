@@ -1,0 +1,19 @@
+name = "blackboxai"
+main = "server.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+account_id = "2ea2ec39dd70a620946645653284319d"
+workers_dev = true
+
+[site]
+bucket = "./public"
+
+[build]
+command = ""
+
+[env.production]
+name = "blackboxai-prod"
+
+[env.staging]
+name = "blackboxai-staging"
+workers_dev = true

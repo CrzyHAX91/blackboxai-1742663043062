@@ -51,18 +51,22 @@ function decodeJwtResponse(token) {
     return JSON.parse(jsonPayload);
 }
 
-// Handle form-based login
 document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
-    const email = document.getElementById('email').value;
+
+    const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value;
     const remember = document.getElementById('remember').checked;
+
+    if (!email || !password) {
+        alert('Please enter both email and password.');
+        return;
+    }
 
     try {
         // Simulate API call
         await simulateAuth(email, password);
-        
+
         // Store auth state
         authState.isAuthenticated = true;
         authState.user = { email };
@@ -79,6 +83,7 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
         alert('Login failed. Please check your credentials and try again.');
     }
 });
+
 
 // Simulate authentication API call
 async function simulateAuth(email, password) {

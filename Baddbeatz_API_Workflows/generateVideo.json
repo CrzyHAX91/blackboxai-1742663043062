@@ -1,0 +1,12 @@
+{
+  "name": "Generate Video",
+  "description": "Genereer een short-form video van tekst of audio",
+  "method": "POST",
+  "url": "https://api.runwayml.com/v1/generate-video",
+  "headers": [{"key": "Authorization", "value": "Bearer YOUR_RUNWAY_KEY"}],
+  "body": {
+    "caption": "<caption>",
+    "audio_url": "<audioURL>",
+    "platform": "<platform>"
+  }
+}

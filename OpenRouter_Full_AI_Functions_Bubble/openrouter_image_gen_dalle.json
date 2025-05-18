@@ -1,0 +1,22 @@
+{
+  "api_name": "OpenRouter DALL·E",
+  "calls": [
+    {
+      "name": "generateImage",
+      "method": "POST",
+      "use_as": "Action",
+      "url": "https://openrouter.ai/api/v1/images/generations",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" },
+        { "key": "Authorization", "value": "Bearer YOUR_OPENROUTER_API_KEY" }
+      ],
+      "body_type": "JSON",
+      "body": {
+        "model": "openrouter/openai/dall-e-3",
+        "prompt": "Een futuristische poster voor een beat drop evenement.",
+        "n": 1,
+        "size": "1024x1024"
+      }
+    }
+  ]
+}

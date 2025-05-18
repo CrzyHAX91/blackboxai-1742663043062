@@ -4,7 +4,6 @@ const audioPlayers = document.querySelectorAll('audio');
 const playButtons = document.querySelectorAll('.fa-play');
 
 
-
 // Audio player initialization
 playButtons.forEach((button, index) => {
     const player = audioPlayers[index];
@@ -149,8 +148,8 @@ function updateTestingTimer() {
     const hours = Math.floor(remaining / (1000 * 60 * 60));
     const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
-    const timeString = `${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
-    displayTestingTime(`Time left: ${timeString}`);
+    const timeString = \`\${hours.toString().padStart(2,'0')}:\${minutes.toString().padStart(2,'0')}:\${seconds.toString().padStart(2,'0')}\`;
+    displayTestingTime(\`Time left: \${timeString}\`);
 }
 
 function displayTestingTime(message) {

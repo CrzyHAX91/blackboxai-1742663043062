@@ -1,0 +1,19 @@
+{
+  "api_name": "OpenRouter Whisper",
+  "calls": [
+    {
+      "name": "transcribeAudio",
+      "method": "POST",
+      "use_as": "Action",
+      "url": "https://openrouter.ai/api/v1/audio/transcriptions",
+      "headers": [
+        { "key": "Authorization", "value": "Bearer YOUR_OPENROUTER_API_KEY" }
+      ],
+      "body_type": "form-data",
+      "body": {
+        "file": "audio_file",
+        "model": "openrouter/openai/whisper-1"
+      }
+    }
+  ]
+}
